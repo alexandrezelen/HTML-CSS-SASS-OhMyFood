@@ -19,7 +19,7 @@ header {
   text-align: center;
 }
 
-title {
+.title {
   text-align: center;
   font-size: 24px;
 }
@@ -31,8 +31,13 @@ html, body {
 }
 
 /* header */
-.image-restaurant {
-  width: 20px;
+.restaurant-image {
+  border-radius: 5px 5px 0px 0px;
+  max-width: 400px;
+  width: 100%;
+  max-height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* bouton commander */
