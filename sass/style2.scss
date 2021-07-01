@@ -1,0 +1,75 @@
+@import './outils/variables';
+
+@import './base/fonts';
+
+header {
+  text-align: center;
+}
+
+title {
+  text-align: center;
+  font-size: 24px;
+}
+
+/* corps */
+
+html, body {
+  margin: 1rem 0rem 0rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* header */
+
+.image-restaurant {
+  width: 20px;
+}
+
+/* bouton commander */
+
+.button-explorer {
+  cursor: pointer;
+  border-radius: 30px;
+  padding: 1.2rem;
+  background-color: $secondary-color;
+  box-shadow: inset 0rem 0rem 2rem 1rem $primary-color-contrast;
+  color: white;
+  border: none;
+  font-size: 1rem;
+}
+
+/* pied de page */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: $background-footer;
+  color: $font-color;
+  height: 12rem;
+}
+
+footer a {
+  color: $font-color;
+  text-decoration: none;
+}
+
+footer img {
+  filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(310deg) brightness(107%) contrast(101%);
+  height: 17px;
+}
+
+.footer-line {
+  padding: 0.3rem;
+  margin-left: 1rem;
+}
+
+.logo-footer {
+  padding: 1rem 0rem;
+}
+
+@media (min-width: 768px) {
+  footer {
+      align-items: center;
+  }
+} 
+
+/*# sourceMappingURL=style.css.map */
