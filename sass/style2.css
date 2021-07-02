@@ -21,6 +21,32 @@ html, body {
   font-family: "Roboto", sans-serif;
 }
 
+h1 {
+  font-family: "Shrikhand";
+  font-size: xx-large;
+  font-style: italic;
+  font-weight: bolder;
+  margin-left: 1rem;
+}
+
+h2 {
+  margin-left: 1rem;
+  font-weight: lighter;
+  font-size: medium;
+  padding-bottom: 1rem;
+  position: relative;
+  margin-bottom: 0;
+}
+
+h2:before {
+  content: "";
+  position: absolute;
+  width: 10%;
+  bottom: 0;
+  left: 0%;
+  border-bottom: 3px solid #99E2D0;
+}
+
 /* header */
 header {
   display: grid;
@@ -39,11 +65,21 @@ header {
   flex-direction: column;
   background-color: #f6f6f6;
   max-width: 400px;
+  gap: 1rem;
 }
 
 .menu-title {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  background-color: #f6f6f6;
+  padding-top: 1rem;
+}
+
+.menu-title img {
+  margin-right: 2rem;
 }
 
 .restaurant-image {
@@ -52,6 +88,17 @@ header {
      object-fit: cover;
   display: flex;
   justify-self: center;
+  margin-bottom: -2.5rem;
+}
+
+.menu-list {
+  margin-left: 1rem;
+  line-height: 0.5rem;
+  box-shadow: 0px 4px 8px #eaeaea;
+  border-radius: 2rem;
+  background-color: white;
+  padding-left: 1rem;
+  margin-right: 1rem;
 }
 
 /* bouton commander */
@@ -59,7 +106,6 @@ header {
   cursor: pointer;
   border-radius: 30px;
   padding: 1.2rem;
-  background-color: #FF79DA;
   box-shadow: inset 0rem 0rem 2rem 1rem #ad5edd;
   color: white;
   border: none;
@@ -76,7 +122,7 @@ footer {
 }
 
 footer a {
-  color: #3b2222;
+  color: white;
   text-decoration: none;
 }
 
