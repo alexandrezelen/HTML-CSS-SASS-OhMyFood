@@ -2,15 +2,6 @@
 
 @import './base/fonts';
 
-header {
-  text-align: center;
-}
-
-.title {
-  text-align: center;
-  font-size: 24px;
-}
-
 /* corps */
 
 html, body {
@@ -20,12 +11,36 @@ html, body {
 
 /* header */
 
-.restaurant-image {
-  border-radius: 5px 5px 0px 0px;
+header {
+  display: grid;
+  grid-template-areas: "a b c"
+}
+
+.title {
+  display: flex;
+  justify-self: center;
+  padding-bottom: 2rem;
+}
+
+/* menu */
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  background-color: $background-color;
   max-width: 400px;
+}
+
+.menu-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.restaurant-image {
   width: 100%;
-  max-height: 250px;
   object-fit: cover;
+  display: flex;
+  justify-self: center;
 }
 
 /* bouton commander */

@@ -15,15 +15,6 @@
   font-style: italic;
   font-display: swap;
 }
-header {
-  text-align: center;
-}
-
-.title {
-  text-align: center;
-  font-size: 24px;
-}
-
 /* corps */
 html, body {
   margin: 1rem 0rem 0rem;
@@ -31,13 +22,36 @@ html, body {
 }
 
 /* header */
-.restaurant-image {
-  border-radius: 5px 5px 0px 0px;
+header {
+  display: grid;
+  grid-template-areas: "a b c";
+}
+
+.title {
+  display: flex;
+  justify-self: center;
+  padding-bottom: 2rem;
+}
+
+/* menu */
+.menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
   max-width: 400px;
+}
+
+.menu-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.restaurant-image {
   width: 100%;
-  max-height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
+  display: flex;
+  justify-self: center;
 }
 
 /* bouton commander */
