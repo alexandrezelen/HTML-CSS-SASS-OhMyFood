@@ -56,11 +56,6 @@
     -webkit-transform: rotate(360deg);
   }
 }
-h1 {
-  text-align: center;
-  font-size: 24px;
-}
-
 /* header */
 header {
   text-align: center;
@@ -72,13 +67,17 @@ html, body {
   font-family: "Roboto", sans-serif;
 }
 
+h1 {
+  text-align: center;
+  font-size: 24px;
+}
+
 /* localisation */
 .localisation {
   display: flex;
   justify-content: center;
-  background-color: #f6f6f6;
+  background-color: #ebebeb;
   margin-top: 0.5rem;
-  box-shadow: inset 0px 3px 4px #f6f6f6;
 }
 
 .localisation p {
@@ -199,12 +198,13 @@ html, body {
 .restaurant-card {
   box-shadow: 0px 4px 8px #eaeaea;
   border-radius: 2rem;
+  background-color: white;
 }
 
 .image p {
   position: absolute;
   z-index: 1;
-  margin-left: 13rem;
+  margin-left: 18rem;
   background-color: #99E2D0;
   padding: 0.4rem;
   border-radius: 4px;
@@ -218,6 +218,11 @@ html, body {
 
 .container h2 {
   font-size: large;
+}
+
+.container img {
+  height: 16px;
+  width: 16px;
 }
 
 .restaurant-card :hover {
