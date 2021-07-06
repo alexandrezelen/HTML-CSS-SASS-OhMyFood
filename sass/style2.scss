@@ -12,6 +12,9 @@ html, body {
 h1 {
   font-family: 'Shrikhand';
   margin-left: 1rem;
+  font-weight: bold;
+  font-style: italic;
+  font-size: xx-large;
 }
 
 h2 {
@@ -26,11 +29,11 @@ h2 {
 h2::after {
   content: "";
   position: absolute;
-  width: 2.5%;
+  width: 2.5rem;
   bottom: 0;
   left: 0;
   border-bottom: 3px solid $third-color;
-}
+}                   
 
 h4 {
   display: flex;
@@ -102,19 +105,21 @@ header a {
   margin-right: 1rem;
 }
 
-.icon {
+/* coeur */
+
+svg {
+  overflow: visible;
   cursor: pointer;
   margin-top: 1rem;
   margin-right: 2rem;
 }
 
-svg {
-  overflow: visible;
-}
-
 path {
+  /* décalage de la position de départ des pointillées */
   stroke-dashoffset: 0;
+  /* contrôle le motif et l'espacement entre les segments utilisés pour tracer le contour */
   stroke-dasharray: 1550;
+  /* modifie l'origine du repère */
   transform-origin: center;
 }
 
@@ -123,15 +128,12 @@ path {
   left: 0;
   right: 0;
   z-index: -1;
-  stroke: none;
+  /* contour */
+  stroke: none; 
 }
 
 .heart-main:hover path {
-  animation: stroke-animation 2s ease-in-out forwards;
-}
-
-.heart-main:hover ~ .heart-background path {
-  animation: fade-animation 2s ease-in-out forwards;
+  animation: stroke-animation 2.5s ease-in-out forwards;
 }
 
 @keyframes stroke-animation {
@@ -156,25 +158,6 @@ path {
   100% {
     stroke-dashoffset: 3100;
     fill: pink;
-  }
-}
-
-@keyframes fade-animation {
-  70% {
-    fill: transparent;
-    transform: scale(1);
-  }
-  80% {
-    fill: lightpink;
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: scale(2.5);
-    opacity: 0;
   }
 }
 
@@ -208,6 +191,10 @@ path {
   font-size: 1rem;
   margin: 2rem 0rem 3rem;
   background-color: $secondary-color;
+}
+
+.button-explorer:hover {
+  background-color: rgba(255,121,218,0.7);
 }
 
 /* pied de page */
