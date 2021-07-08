@@ -37,6 +37,7 @@
   bottom: 0;
   -webkit-animation-duration: 1000ms 150ms;
           animation-duration: 1000ms 150ms;
+  background-image: url(http://lorempixel.com/500/200/nature/1/);
 }
 
 /* animation du loader */

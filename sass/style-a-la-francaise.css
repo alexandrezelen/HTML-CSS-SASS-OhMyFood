@@ -98,6 +98,76 @@ h4 {
   margin-top: -0.5rem;
 }
 
+/* apparition progressive du menu */
+#row-1 {
+  opacity: 0;
+  -webkit-animation: anim 100ms linear forwards 200ms;
+  animation: anim 100ms linear forwards 200ms;
+}
+
+#row-2 {
+  opacity: 0;
+  -webkit-animation: anim 200ms linear forwards 300ms;
+  animation: anim 200ms linear forwards 300ms;
+}
+
+#row-3 {
+  opacity: 0;
+  -webkit-animation: anim 300ms linear forwards 400ms;
+  animation: anim 300ms linear forwards 400ms;
+}
+
+#row-4 {
+  opacity: 0;
+  -webkit-animation: anim 400ms linear forwards 500ms;
+  animation: anim 400ms linear forwards 500ms;
+}
+
+#row-5 {
+  opacity: 0;
+  -webkit-animation: anim 500ms linear forwards 600ms;
+  animation: anim 500ms linear forwards 600ms;
+}
+
+#row-6 {
+  opacity: 0;
+  -webkit-animation: anim 600ms linear forwards 700ms;
+  animation: anim 600ms linear forwards 700ms;
+}
+
+#row-7 {
+  opacity: 0;
+  -webkit-animation: anim 700ms linear forwards 800ms;
+  animation: anim 700ms linear forwards 800ms;
+}
+
+#row-8 {
+  opacity: 0;
+  -webkit-animation: anim 800ms linear forwards 900ms;
+  animation: anim 800ms linear forwards 900ms;
+}
+
+#row-9 {
+  opacity: 0;
+  -webkit-animation: anim 900ms linear forwards 1000ms;
+  animation: anim 900ms linear forwards 1000ms;
+}
+@-webkit-keyframes anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /* soulignement */
 h2 {
   margin-left: 1rem;
@@ -138,7 +208,7 @@ label:after {
 }
 
 label {
-  transition: 0.3s;
+  transition: 0.2ms;
   background: white;
   border-radius: 15px;
 }
@@ -191,8 +261,8 @@ path {
 }
 
 .heart-main:hover path {
-  -webkit-animation: stroke-animation 2.5s ease-in-out forwards;
-          animation: stroke-animation 2.5s ease-in-out forwards;
+  -webkit-animation: stroke-animation 2.2ms ease-in-out forwards;
+          animation: stroke-animation 2.2ms ease-in-out forwards;
 }
 
 @-webkit-keyframes stroke-animation {
