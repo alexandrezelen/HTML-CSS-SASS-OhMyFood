@@ -2,6 +2,39 @@
 
 @import './base/fonts';
 
+.chargement-background {
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
 .chargement {
   /* création du loader */
 
@@ -22,8 +55,6 @@
   margin: auto;
   position: absolute;
   top:0; left:0; right:0; bottom:0;
-  animation-duration: 1000ms 150ms;
-  background-image: url(http://lorempixel.com/500/200/nature/1/);
 }
 
   /* animation du loader */
