@@ -1,0 +1,446 @@
+@import './outils/variables';
+
+@import './base/fonts';
+
+/* corps */
+
+html, body {
+  margin: 1rem 0rem 0rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-family: 'Shrikhand';
+  margin-left: 1rem;
+  font-weight: bold;
+  font-style: italic;
+  font-size: xx-large;
+}
+
+/* header */
+
+header {
+  display: grid;
+  grid-template-areas: "a b c"
+}
+
+header a {
+  width: 16px;
+  height: 16px;
+}
+
+.title {
+  display: flex;
+  justify-self: center;
+  padding-bottom: 2rem;
+}
+
+.left-arrow {
+  cursor: pointer;
+}
+
+/* menu */
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  background-color: $background-color;
+  gap: 1rem;
+}
+
+.menu-title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  background-color: $background-color;
+  padding-top: 1rem;
+}
+
+.menu-title img {
+  margin-right: 2rem;
+}
+
+.restaurant-image {
+  width: 100%;
+  object-fit: cover;
+  display: flex;
+  justify-self: center;
+  margin-bottom: - 2.5rem;
+}
+
+.row-plat {
+  box-shadow: 0px 4px 8px $shadow-color;
+  line-height: 1rem;
+}
+
+h3 {
+  font-weight: 900;
+  padding-top: 0.5rem;
+}
+
+h4 {
+  font-weight: 100;
+  margin-right: 1rem;
+  margin-top: -0.5rem;
+}
+
+/* apparition progressive du menu */
+
+#row-1 {
+  opacity:0;
+  -moz-animation: anim 100ms linear forwards 200ms;
+  -webkit-animation: anim 100ms linear forwards 200ms;
+  -o-animation: anim 100ms linear forwards 200ms;
+  -ms-animation: anim 100ms linear forwards 200ms;
+  animation: anim 100ms linear forwards 200ms;
+}
+
+#row-2 {
+  opacity:0;
+  -moz-animation: anim 200ms linear forwards 300ms;
+  -webkit-animation: anim 200ms linear forwards 300ms;
+  -o-animation: anim 200ms linear forwards 300ms;
+  -ms-animation: anim 200ms linear forwards 300ms;
+  animation: anim 200ms linear forwards 300ms;
+}
+
+#row-3 {
+  opacity:0;
+  -moz-animation: anim 300ms linear forwards 400ms;
+  -webkit-animation: anim 300ms linear forwards 400ms;
+  -o-animation: anim 300ms linear forwards 400ms;
+  -ms-animation: anim 300ms linear forwards 400ms;
+  animation: anim 300ms linear forwards 400ms;
+}
+
+#row-4 {
+  opacity:0;
+  -moz-animation: anim 400ms linear forwards 500ms;
+  -webkit-animation: anim 400ms linear forwards 500ms;
+  -o-animation: anim 400ms linear forwards 500ms;
+  -ms-animation: anim 400ms linear forwards 500ms;
+  animation: anim 400ms linear forwards 500ms;
+}
+
+#row-5 {
+  opacity:0;
+  -moz-animation: anim 500ms linear forwards 600ms;
+  -webkit-animation: anim 500ms linear forwards 600ms;
+  -o-animation: anim 500ms linear forwards 600ms;
+  -ms-animation: anim 500ms linear forwards 600ms;
+  animation: anim 500ms linear forwards 600ms;
+}
+
+#row-6 {
+  opacity:0;
+  -moz-animation: anim 600ms linear forwards 700ms;
+  -webkit-animation: anim 600ms linear forwards 700ms;
+  -o-animation: anim 600ms linear forwards 700ms;
+  -ms-animation: anim 600ms linear forwards 700ms;
+  animation: anim 600ms linear forwards 700ms;
+}
+
+#row-7 {
+  opacity:0;
+  -moz-animation: anim 700ms linear forwards 800ms;
+  -webkit-animation: anim 700ms linear forwards 800ms;
+  -o-animation: anim 700ms linear forwards 800ms;
+  -ms-animation: anim 700ms linear forwards 800ms;
+  animation: anim 700ms linear forwards 800ms;
+}
+
+#row-8 {
+  opacity:0;
+  -moz-animation: anim 800ms linear forwards 900ms;
+  -webkit-animation: anim 800ms linear forwards 900ms;
+  -o-animation: anim 800ms linear forwards 900ms;
+  -ms-animation: anim 800ms linear forwards 900ms;
+  animation: anim 800ms linear forwards 900ms;
+}
+
+#row-9 {
+  opacity:0;
+  -moz-animation: anim 900ms linear forwards 1000ms;
+  -webkit-animation: anim 900ms linear forwards 1000ms;
+  -o-animation: anim 900ms linear forwards 1000ms;
+  -ms-animation: anim 900ms linear forwards 1000ms;
+  animation: anim 900ms linear forwards 1000ms;
+}
+
+@-moz-keyframes anim {
+  0%  {opacity:0;}
+  100% {opacity:1;}
+}
+@-webkit-keyframes anim {
+  0%  {opacity:0;}
+  100% {opacity:1;}
+}
+@-o-keyframes anim {
+  0%  {opacity:0;}
+  100% {opacity:1;}
+}
+@-ms-keyframes anim {
+  0%  {opacity:0;}
+  100% {opacity:1;}
+}
+@keyframes anim {
+  0%  {opacity:0;}
+  100% {opacity:1;}
+}
+
+/* soulignement des titres h2 */
+
+h2 {
+  margin-left: 1rem;
+  font-weight: lighter;
+  font-size: medium;
+  padding-bottom: 1rem;
+  position: relative;
+  margin-bottom: 0;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  width: 2.5rem;
+  bottom: 0;
+  left: 0;
+  border-bottom: 3px solid $third-color;
+}
+
+/* coche */
+
+label:after {
+  content: "✓";
+  position: absolute;
+  height: 100%;
+  font-size: 2em;
+  background: #99E2D0;
+  width: 2em;
+  text-align: center;
+  line-height: 3em;
+  border-radius: 0 15px 15px 0;
+  color: white;
+  right: -5em;
+  transition: 0.2s;
+}
+
+:checked + label:after {
+  right: 0;
+}
+
+label{
+  transition:0.200ms;
+  background: white;
+  border-radius: 15px;
+}
+
+.menu-list {
+  display: flex;
+  padding: 0rem 5rem 0rem 1rem;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  height: 6rem;
+}
+
+.hidden {
+  position: absolute;
+  right: 100vw;
+}
+
+.column-2 {
+  margin-left: auto;
+  padding-left: 2rem;
+}
+
+/* coeur */
+
+.icon {
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-right: 2rem;
+}
+
+svg {
+  overflow: visible;
+}
+
+path {
+  /* décalage de la position de départ des pointillées */
+  stroke-dashoffset: 0;
+  /* contrôle le motif et l'espacement entre les segments utilisés pour tracer le contour */
+  stroke-dasharray: 1550;
+  /* modifie l'origine du repère */
+  transform-origin: center;
+}
+
+.heart-background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  /* contour */
+  stroke: none;
+}
+
+.heart-main:hover path {
+  -webkit-animation: stroke-animation 2s ease-in-out forwards;
+          animation: stroke-animation 2s ease-in-out forwards;
+}
+
+.heart-main:hover ~ .heart-background path {
+  -webkit-animation: fade-animation 2s ease-in-out forwards;
+          animation: fade-animation 2s ease-in-out forwards;
+}
+
+@-webkit-keyframes stroke-animation {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  30% {
+    stroke-dashoffset: 1550;
+  }
+  60% {
+    stroke-dashoffset: 3100;
+    fill: transparent;
+    transform: scale(1);
+  }
+  80% {
+    fill: violet;
+    transform: scale(1.1);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    stroke-dashoffset: 3100;
+    fill: violet;
+  }
+}
+
+@keyframes stroke-animation {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  30% {
+    stroke-dashoffset: 1550;
+  }
+  60% {
+    stroke-dashoffset: 3100;
+    fill: transparent;
+    transform: scale(1);
+  }
+  80% {
+    fill: violet;
+    transform: scale(1.1);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    stroke-dashoffset: 3100;
+    fill: violet;
+  }
+}
+@-webkit-keyframes fade-animation {
+  70% {
+    fill: transparent;
+    transform: scale(1);
+  }
+  80% {
+    fill: violet;
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+@keyframes fade-animation {
+  70% {
+    fill: transparent;
+    transform: scale(1);
+  }
+  80% {
+    fill: violet;
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+/* bouton commander */
+
+.section-commander {
+  background-color: $background-color;
+  display: flex;
+  justify-content: center;
+}
+
+.button-commander {
+  cursor: pointer;
+  border-radius: 30px;
+  padding: 1.2rem 4rem;
+  box-shadow: inset 0rem 0rem 2rem 1rem $primary-color-contrast;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  margin: 2rem 0rem 3rem;
+  background-color: $secondary-color;
+}
+
+.button-commander:hover {
+  background-color: rgba(255,121,218,0.7);
+}
+
+/* pied de page */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: $background-footer;
+  color: $font-color;
+  height: 12rem;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer img {
+  filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(310deg) brightness(107%) contrast(101%);
+  height: 17px;
+}
+
+.footer-line {
+  padding: 0.3rem;
+  margin-left: 1rem;
+}
+
+.logo-footer {
+  padding: 1rem 0rem;
+}
+
+@media (min-width: 768px) {
+  footer {
+      align-items: center;
+  }
+} 
+
+/*# sourceMappingURL=style.css.map */
