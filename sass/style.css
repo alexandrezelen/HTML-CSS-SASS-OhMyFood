@@ -17,11 +17,11 @@
   font-display: swap;
 }
 .chargement-background {
-  animation: fadeIn 3000ms;
-  -webkit-animation: fadeIn 3000ms;
-  -moz-animation: fadeIn 3000ms;
-  -o-animation: fadeIn 3000ms;
-  -ms-animation: fadeIn 3000ms;
+  animation: fadeIn 5000ms;
+  -webkit-animation: fadeIn 5000ms;
+  -moz-animation: fadeIn 5000ms;
+  -o-animation: fadeIn 5000ms;
+  -ms-animation: fadeIn 5000ms;
 }
 
 @keyframes fadeIn {
@@ -49,8 +49,8 @@
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  -webkit-animation: spin 3000ms linear;
-  animation: spin 3000ms linear;
+  -webkit-animation: spin 1500ms linear;
+  animation: spin 1500ms linear;
   transform: scale(0);
   /* placement au milieu de la page */
   margin: auto;
@@ -171,9 +171,12 @@ h1 {
   padding-bottom: 0.4rem;
 }
 
-.fonctionnement :hover {
+.fonctionnement-card:hover {
   background-color: #F5edff;
   cursor: pointer;
+}
+.fonctionnement-card:hover img {
+  filter: invert(46%) sepia(49%) saturate(866%) hue-rotate(231deg) brightness(89%) contrast(91%);
 }
 
 .fonctionnement-card svg :hover {
@@ -237,6 +240,9 @@ h1 {
   margin-right: 1rem;
   position: relative;
 }
+.restaurant-card:hover {
+  cursor: pointer;
+}
 
 .image p {
   position: absolute;
@@ -263,145 +269,32 @@ h1 {
   width: 16px;
 }
 
-.restaurant-card :hover {
-  cursor: pointer;
-}
-
 /* coeur */
-.icon {
-  cursor: pointer;
+.heart {
   position: absolute;
-  right: 20px;
+  right: 1rem;
   bottom: 3rem;
 }
-
-svg {
-  overflow: visible;
-}
-
-path {
-  /* décalage de la position de départ des pointillées */
-  stroke-dashoffset: 0;
-  /* contrôle le motif et l'espacement entre les segments utilisés pour tracer le contour */
-  stroke-dasharray: 1550;
-  /* modifie l'origine du repère */
-  transform-origin: center;
-}
-
-.heart-background {
+.heart .bg {
+  z-index: 1;
   position: absolute;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  /* contour */
-  stroke: none;
+  font-size: 30px;
+}
+.heart .no-bg {
+  font-size: 30px;
+  z-index: 0;
+  transform: scale(0);
+  background: linear-gradient(#a55cdb, #FF79DA);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.heart:hover .no-bg {
+  transform-origin: bottom;
+  transform: scale(1);
+  transition: 0.3s;
 }
 
-.heart-main:hover path {
-  -webkit-animation: stroke-animation 2s ease-in-out forwards;
-  animation: stroke-animation 2s ease-in-out forwards;
-}
-
-.heart-main:hover ~ .heart-background path {
-  -webkit-animation: fade-animation 2s ease-in-out forwards;
-  animation: fade-animation 2s ease-in-out forwards;
-}
-
-@-webkit-keyframes stroke-animation {
-  0% {
-    stroke-dashoffset: 0;
-  }
-  30% {
-    stroke-dashoffset: 1550;
-  }
-  60% {
-    stroke-dashoffset: 3100;
-    fill: transparent;
-    transform: scale(1);
-  }
-  80% {
-    fill: violet;
-    transform: scale(1.1);
-  }
-  90% {
-    transform: scale(1);
-  }
-  100% {
-    stroke-dashoffset: 3100;
-    fill: violet;
-  }
-}
-@keyframes stroke-animation {
-  0% {
-    stroke-dashoffset: 0;
-  }
-  30% {
-    stroke-dashoffset: 1550;
-  }
-  60% {
-    stroke-dashoffset: 3100;
-    fill: transparent;
-    transform: scale(1);
-  }
-  80% {
-    fill: violet;
-    transform: scale(1.1);
-  }
-  90% {
-    transform: scale(1);
-  }
-  100% {
-    stroke-dashoffset: 3100;
-    fill: violet;
-  }
-}
-@-webkit-keyframes fade-animation {
-  70% {
-    fill: transparent;
-    transform: scale(1);
-  }
-  80% {
-    fill: violet;
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: scale(2.5);
-    opacity: 0;
-  }
-}
-@keyframes fade-animation {
-  70% {
-    fill: transparent;
-    transform: scale(1);
-  }
-  80% {
-    fill: violet;
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: scale(2.5);
-    opacity: 0;
-  }
-}
-@media (max-width: 768px) {
-  .titre-restaurant {
-    text-align: left;
-  }
-
-  .restaurants {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
 /* pied de page */
 footer {
   display: flex;

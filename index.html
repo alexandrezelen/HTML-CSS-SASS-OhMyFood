@@ -3,6 +3,8 @@
 
 <head>
 
+    <script src="https://kit.fontawesome.com/09901c5d6c.js" crossorigin="anonymous"></script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,26 +19,26 @@
 
 <body>
 
-    <section class="chargement-background">
+    <div class="chargement-background">
         <div class="chargement"></div>
 
     <header>
-        <img src="images/logo/ohmyfood.svg" alt="logo-OhMyFood"></div>
+        <img src="images/logo/ohmyfood.svg" alt="logo-OhMyFood">
     </header>
 
-    <section class="localisation">
+    <div class="localisation">
         <img src="images/logo/map-marker-alt-solid.svg" alt="logo-map-marker">
         <p>Paris, Belleville</p>
-    </section>
+    </div>
     
     <section class="explorer">
-        <h1>Réservez le menu qui vous convient</h1>
+        <h2>Réservez le menu qui vous convient</h2>
         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
         <button class="button-explorer">Explorer nos restaurants</button>
     </section>
 
     <h1 class="titre-fonctionnement">Fonctionnement</h1>
-    <section class="fonctionnement">
+    <div class="fonctionnement">
         <div class="fonctionnement-card">
             <p class="number">1</p>
             <img src="images/logo/telephone-intelligent.svg" alt="logo-telephone">
@@ -52,7 +54,7 @@
             <img src="images/logo/restaurant.svg" alt="logo-restaurant">
             <p>Dégustez au restaurant</p>
         </div>
-    </section>
+    </div>
 
     <h1 class="titre-restaurant">Restaurants</h1>
     <section class="restaurants">
@@ -63,11 +65,9 @@
             </div>
             <div class="container">
                 <h2><b>La palette du goût</b></h2>
-                <div class="icon">
-                    <svg class="heart-main" stroke="violet" stroke-width="20" width="24" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="transparent" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
-                    </svg>                
-                    <svg class="heart-background" stroke="violet" stroke-width="20" width="24" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="transparent" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
-                    </svg>                
+                <div class="heart">
+                    <i class="far fa-heart bg"></i>
+                    <i class="fas fa-heart no-bg"></i>
                 </div>    
                 <p>Ménilmontant</p>
             </div>
@@ -79,12 +79,10 @@
             </div>
             <div class="container">
                 <h2><b>La note enchantée</b></h2>
-                <div class="icon">
-                    <svg class="heart-main" stroke="violet" stroke-width="20" width="24" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="transparent" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
-                    </svg>                
-                    <svg class="heart-background" stroke="violet" stroke-width="20" width="24" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="transparent" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
-                    </svg>                
-                </div> 
+                <div class="heart">
+                    <i class="far fa-heart bg"></i>
+                    <i class="fas fa-heart no-bg"></i>
+                </div>    
                 <p>Charonne</p>
             </div>
         </a>
@@ -93,11 +91,9 @@
             <div class="container">
                 <h2><b>À la française</b></h2>
                 <p>Cité Rouge</p>
-                <div class="icon">
-                    <svg class="heart-main" stroke="violet" stroke-width="20" width="24" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="transparent" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
-                    </svg>                
-                    <svg class="heart-background" stroke="violet" stroke-width="20" width="24" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="transparent" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
-                    </svg>                
+                <div class="heart">
+                    <i class="far fa-heart bg"></i>
+                    <i class="fas fa-heart no-bg"></i>
                 </div> 
             </div>
         </a>
@@ -105,12 +101,10 @@
             <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
             <div class="container">
                 <h2><b>Le délice des sens</b></h2>
-                <div class="icon">
-                    <svg class="heart-main" stroke="violet" stroke-width="20" width="24" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="transparent" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
-                    </svg>                
-                    <svg class="heart-background" stroke="violet" stroke-width="20" width="24" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="transparent" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
-                    </svg>                
-                </div> 
+                <div class="heart">
+                    <i class="far fa-heart bg"></i>
+                    <i class="fas fa-heart no-bg"></i>
+                </div>  
                 <p>Folie-Méricourt</p>
             </div>
         </a>
@@ -135,7 +129,7 @@
             <a href="mailto:ohmyfood@example.com">Contact</a>
         </div>
     </footer>
-    </section>
+    </div>
     
 </body>
 
