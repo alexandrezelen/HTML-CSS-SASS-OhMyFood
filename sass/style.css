@@ -157,6 +157,9 @@ h1 {
   width: 14rem;
   box-shadow: 0.5rem 0.5rem 0.5rem #eaeaea;
 }
+.fonctionnement-card img {
+  width: 20px;
+}
 
 .number {
   position: absolute;
@@ -267,6 +270,10 @@ h1 {
 .container img {
   height: 16px;
   width: 16px;
+}
+
+a .img {
+  width: 375px;
 }
 
 /* coeur */

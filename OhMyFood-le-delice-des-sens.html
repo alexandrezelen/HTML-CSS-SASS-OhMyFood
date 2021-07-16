@@ -3,12 +3,14 @@
 
 <head>
 
+    <script src="https://kit.fontawesome.com/09901c5d6c.js" crossorigin="anonymous"></script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="./sass/style-le-délice-des-sens.css">
+    <link rel="stylesheet" type="text/css" href="./sass/style-la-palette-du-gout.css">
 
-    <title>OhMyFood-le-délice-des-sens</title>
+    <title>Le délice des sens</title>
 
     <link rel="preload" href="Shrikhand-Regular.woff2" as="font" type="font/woff2" crossorigin> 
     <link rel="preload" href="Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -22,136 +24,139 @@
         <img class="title" src="images/logo/ohmyfood.svg" alt="logo-OhMyFood">
     </header>
 
+    
+    <div class="image-principale">
+        <img class="image" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
+    </div>
+
     <section class="menu">
-        <img class="restaurant-image" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="À la française">
         <div class="menu-title">
             <h1>Le délice des sens</h1>
-            <div class="icon">
-                <svg class="heart-main" stroke="violet" stroke-width="20" width="24" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="transparent" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
-                </svg>                
-                <svg class="heart-background" stroke="violet" stroke-width="20" width="24" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="transparent" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
-                </svg>                
-            </div>    
-        </div>
-
-        <h2>ENTRÉES</h2>
-        <div class="row-plat">
-            <div id="row-1">
-                <input type="checkbox" class="hidden" id="cbx">
-                <label class="menu-list" for="cbx">
-                    <span class="column-1">
-                        <h3>Tartare de thon</h3>
-                        <h4>Assaisonné au yuzu</h4>
-                    </span>
-                <span class="column-2">25€</span>
-                </label>
-            </div>
-        </div>
-        <div class="row-plat">
-            <div id="row-2">
-            <input type="checkbox" class="hidden" id="cbx2">
-                <label class="menu-list" for="cbx2">
-                    <span class="column-1">
-                        <h3>Bouchée de homard croustillant</h3>
-                        <h4>Et sa farandole de petits légumes</h4>
-                    </span>
-                    <span class="column-2">35€</span>
-                </label>
-            </div>
-        </div>
-        <div class="row-plat">
-            <div id="row-3">
-                <input type="checkbox" class="hidden" id="cbx3">
-                <label class="menu-list" for="cbx3">
-                    <span class="column-1">
-                        <h3>Velouté de cèpes</h3>
-                        <h4>Aux truffes</h4>
-                    </span>
-                    <span class="column-2">20€</span>
-                </label>
+            <div class="heart">
+                <i class="far fa-heart bg"></i>
+                <i class="fas fa-heart no-bg"></i>
             </div>
         </div>
 
-        <h2>PLATS</h2>
-        <div class="row-plat">
-            <div id="row-4">
-                <input type="checkbox" class="hidden" id="cbx4">
-                <label class="menu-list" for="cbx4">
-                    <span class="column-1">
-                        <h3>Poulet rôti aux herbes de Provence</h3>
-                        <h4>Et sa crème de truffe</h4>
-                    </span>
-                    <span class="column-2">40€</span>
-                </label>
+        <h2>entrées</h2>
+        
+        <section class="row-plate">
+            <div class="row-plate__column">
+                <h3 class="row-plate__firstline">Tartare de thon</h3>
+                <p class="row-plate__secondline">Assaisonné au yuzu</p>
             </div>
-        </div>
-        <div class="row-plat">
-            <div id="row-5">
-                <input type="checkbox" class="hidden" id="cbx5">
-                <label class="menu-list" for="cbx5">
-                    <span class="column-1">
-                        <h3>Langouste rôtie</h3>
-                        <h4>Et ses légumes de saison</h4>
-                    </span>
-                    <span class="column-2">35€</span>
-                </label>
+            <span class="row-plate__price">25€</span>
+            <div class="row-plate__box">
+                <span class="row-plate__wrap">
+                    <i class="row-plate__check fas fa-check"></i>
+                </span>
             </div>
-        </div>
-        <div class="row-plat">
-            <div id="row-6">
-                <input type="checkbox" class="hidden" id="cbx6">
-                <label class="menu-list" for="cbx6">
-                    <span class="column-1">
-                       <h3>Côte de boeuf Angus</h3>
-                       <h4>Et sa purée de panais</h4>
-                    </span>
-                    <span class="column-2">44€</span>
-                </label>
+        </section>
+        <section class="row-plate">
+            <div class="row-plate__column">
+                <h3 class="row-plate__firstline">Bouchée de homard croustillant</h3>
+                <p class="row-plate__secondline">Et sa farandole de petits légumes</p>
             </div>
-        </div>
+            <span class="row-plate__price">35€</span>
+            <div class="row-plate__box">
+                <span class="row-plate__wrap">
+                    <i class="row-plate__check fas fa-check"></i>
+                </span>
+            </div>
+        </section>
+        <section class="row-plate">
+            <div class="row-plate__column">
+                <h3 class="row-plate__firstline">Velouté de cèpes</h3>
+                <p class="row-plate__secondline">Aux truffes</p>
+            </div>
+            <span class="row-plate__price">20€</span>
+            <div class="row-plate__box">
+                <span class="row-plate__wrap">
+                    <i class="row-plate__check fas fa-check"></i>
+                </span>
+            </div>
+        </section>
+
+        <h2>plats</h2>
+        <section class="row-plate">
+            <div class="row-plate__column">
+                <h3 class="row-plate__firstline">Poulet rôti aux herbes de provence</h3>
+                <p class="row-plate__secondline">Et sa crème de truffe</p>
+            </div>
+            <span class="row-plate__price">40€</span>
+            <div class="row-plate__box">
+                <span class="row-plate__wrap">
+                    <i class="row-plate__check fas fa-check"></i>
+                </span>
+            </div>
+        </section>
+        <section class="row-plate">
+            <div class="row-plate__column">
+                <h3 class="row-plate__firstline">Langouste rôtie</h3>
+                <p class="row-plate__secondline">Et ses légumes de saison</p>
+            </div>
+            <span class="row-plate__price">35€</span>
+            <div class="row-plate__box">
+                <span class="row-plate__wrap">
+                    <i class="row-plate__check fas fa-check"></i>
+                </span>
+            </div>
+        </section>
+        <section class="row-plate">
+            <div class="row-plate__column">
+                <h3 class="row-plate__firstline">Côte de boeuf angus</h3>
+                <p class="row-plate__secondline">Et sa purée de panais</p>
+            </div>
+            <span class="row-plate__price">44€</span>
+            <div class="row-plate__box">
+                <span class="row-plate__wrap">
+                    <i class="row-plate__check fas fa-check"></i>
+                </span>
+            </div>
+        </section>
     
-        <h2>DESSERTS</h2>
-        <div class="row-plat">
-            <div id="row-7">
-                <input type="checkbox" class="hidden" id="cbx7">
-                <label class="menu-list" for="cbx7">
-                    <span class="column-1">
-                        <h3>Farandole de desserts</h3>
-                        <h4>Du chef</h4>
-                    </span>
-                    <span class="column-2">18€</span>
-                </label>
+        <h2>desserts</h2>
+
+        <section class="row-plate">
+            <div class="row-plate__column">
+                <h3 class="row-plate__firstline">Farandole de desserts</h3>
+                <p class="row-plate__secondline">Du chef</p>
             </div>
-        </div>
-        <div class="row-plat">
-            <div id="row-8">
-                <input type="checkbox" class="hidden" id="cbx8">
-                <label class="menu-list" for="cbx8">
-                    <span class="column-1">
-                        <h3>Crème brulée</h3>
-                        <h4>Revisité</h4>
-                    </span>
-                    <span class="column-2">22€</span>
-                </label>
+            <span class="row-plate__price">18€</span>
+            <div class="row-plate__box">
+                <span class="row-plate__wrap">
+                    <i class="row-plate__check fas fa-check"></i>
+                </span>
             </div>
-        </div>
-        <div class="row-plat">
-            <div id="row-9">
-                <input type="checkbox" class="hidden" id="cbx9">
-                <label class="menu-list" for="cbx9">
-                    <span class="column-1">
-                        <h3>Tiramisu</h3>
-                        <h4>À la noisette</h4>
-                    </span>
-                    <span class="column-2">23€</span>
-                </label>
+        </section>
+        <section class="row-plate">
+            <div class="row-plate__column">
+                <h3 class="row-plate__firstline">Crème brulée</h3>
+                <p class="row-plate__secondline">Revisitée</p>
             </div>
-        </div>
-    </section>
+            <span class="row-plate__price">22€</span>
+            <div class="row-plate__box">
+                <span class="row-plate__wrap">
+                    <i class="row-plate__check fas fa-check"></i>
+                </span>
+            </div>
+        </section>
+        <section class="row-plate">
+            <div class="row-plate__column">
+                <h3 class="row-plate__firstline">Tiramisu</h3>
+                <p class="row-plate__secondline">À la noisette</p>
+            </div>
+            <span class="row-plate__price">23€</span>
+            <div class="row-plate__box">
+                <span class="row-plate__wrap">
+                    <i class="row-plate__check fas fa-check"></i>
+                </span>
+            </div>
+        </section>
     
-    <section class="section-commander">
-    <button class="button-commander">Commander</button>
-    </section>
+        <section class="section-commander">
+        <button class="button-commander">Commander</button>
+        </section>
 
     <footer>
         <div class="footer-line">
@@ -172,7 +177,7 @@
             <a href="mailto:ohmyfood@example.com">Contact</a>
         </div>
     </footer>
-
+    </section>
 </body>
 
 </html>

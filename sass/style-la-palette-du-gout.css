@@ -58,15 +58,17 @@ header a {
   align-items: center;
 }
 
+/* image principale */
 .image-principale {
-  z-index: 1;
-  height: 250px;
+  z-index: 0;
+  height: 300px;
 }
-.image-principale img {
-  height: 100%;
+.image-principale .image {
+  height: 55%;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+  position: absolute;
 }
 
 /* coeur */
@@ -99,7 +101,7 @@ header a {
   flex-direction: column;
   background-color: #f6f6f6;
   border-radius: 30px 30px 0px 0px;
-  z-index: 2;
+  z-index: 1;
   position: relative;
 }
 
@@ -112,6 +114,13 @@ header a {
   box-shadow: 0px 4px 8px #eaeaea;
   overflow: hidden;
   cursor: pointer;
+  animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  /* Firefox */
+  -webkit-animation: fadein 2s;
+  /* Safari et Chrome */
+  -o-animation: fadein 2s;
+  /* Opera */
 }
 .row-plate__column {
   text-overflow: ellipsis;
@@ -142,21 +151,21 @@ header a {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition-duration: 250ms;
+  transition-duration: 400ms;
 }
 .row-plate:hover .row-plate__box {
   margin-right: -1rem;
 }
 .row-plate__wrap {
-  height: 1.4rem;
-  width: 1.4rem;
+  height: 1.5rem;
+  width: 1.5rem;
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50px;
   transform: rotate(180deg);
-  transition-duration: 250ms;
+  transition-duration: 400ms;
 }
 .row-plate:hover .row-plate__wrap {
   transform: rotate(0);
@@ -164,77 +173,24 @@ header a {
 .row-plate__check {
   color: #99E2D0;
 }
-
-/* apparition progressive du menu */
-#row-1 {
-  opacity: 0;
-  -webkit-animation: anim 100ms linear forwards 200ms;
-  animation: anim 100ms linear forwards 200ms;
-}
-
-#row-2 {
-  opacity: 0;
-  -webkit-animation: anim 200ms linear forwards 300ms;
-  animation: anim 200ms linear forwards 300ms;
-}
-
-#row-3 {
-  opacity: 0;
-  -webkit-animation: anim 300ms linear forwards 400ms;
-  animation: anim 300ms linear forwards 400ms;
-}
-
-#row-4 {
-  opacity: 0;
-  -webkit-animation: anim 400ms linear forwards 500ms;
-  animation: anim 400ms linear forwards 500ms;
-}
-
-#row-5 {
-  opacity: 0;
-  -webkit-animation: anim 500ms linear forwards 600ms;
-  animation: anim 500ms linear forwards 600ms;
-}
-
-#row-6 {
-  opacity: 0;
-  -webkit-animation: anim 600ms linear forwards 700ms;
-  animation: anim 600ms linear forwards 700ms;
-}
-
-#row-7 {
-  opacity: 0;
-  -webkit-animation: anim 700ms linear forwards 800ms;
-  animation: anim 700ms linear forwards 800ms;
-}
-
-#row-8 {
-  opacity: 0;
-  -webkit-animation: anim 800ms linear forwards 900ms;
-  animation: anim 800ms linear forwards 900ms;
-}
-
-#row-9 {
-  opacity: 0;
-  -webkit-animation: anim 900ms linear forwards 1000ms;
-  animation: anim 900ms linear forwards 1000ms;
-}
-@-webkit-keyframes anim {
-  0% {
+@keyframes fadein {
+  from {
     opacity: 0;
   }
-  100% {
+  to {
     opacity: 1;
   }
 }
-@keyframes anim {
-  0% {
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
     opacity: 0;
   }
-  100% {
+  to {
     opacity: 1;
   }
 }
+
 /* soulignement des titres h2 */
 h2 {
   margin-left: 1rem;

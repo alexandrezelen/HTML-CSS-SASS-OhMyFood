@@ -159,6 +159,9 @@ h1 {
   justify-content: space-evenly;
   width: 14rem;
   box-shadow:0.5rem 0.5rem 0.5rem $shadow-color;
+  & img {
+    width: 20px;
+  }
 }
 
 .number {
@@ -272,6 +275,10 @@ h1 {
 .container img {
   height: 16px;
   width: 16px;
+}
+
+a .img {
+  width: 375px;
 }
 
 /* coeur */

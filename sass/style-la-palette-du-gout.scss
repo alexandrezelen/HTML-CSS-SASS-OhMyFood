@@ -45,13 +45,16 @@ header a {
   align-items: center;
 }
 
+/* image principale */
+
 .image-principale {
-  z-index: 1;
-  height: 250px;
-  & img {
-      height: 100%;
-      object-fit: cover;
-      width: 100%;
+  z-index: 0;
+  height: 300px;
+  & .image {
+    height: 55%;
+    object-fit: cover;
+    width: 100%;
+    position: absolute;
   }
 }
 
@@ -91,11 +94,12 @@ header a {
   flex-direction: column;
   background-color: $background-color;
   border-radius: 30px 30px 0px 0px;
-  z-index: 2;
+  z-index: 1;
   position: relative;
 }
 
 .row-plate {
+
   margin: 0.5rem;
   background-color: white;
   padding: 1rem;
@@ -104,6 +108,10 @@ header a {
   box-shadow: 0px 4px 8px $shadow-color;
   overflow: hidden;
   cursor: pointer;
+  animation: fadein 2s;
+  -moz-animation: fadein 2s; /* Firefox */
+  -webkit-animation: fadein 2s; /* Safari et Chrome */
+  -o-animation: fadein 2s; /* Opera */
 
   &__column {
     text-overflow: ellipsis;
@@ -138,7 +146,7 @@ header a {
     display: flex;
     align-items: center;
     justify-content:center;
-    transition-duration: 250ms;
+    transition-duration: 400ms;
   }
 
   &:hover &__box {
@@ -146,15 +154,15 @@ header a {
   }
 
   &__wrap {
-    height: 1.4rem;
-    width: 1.4rem;
+    height: 1.5rem;
+    width: 1.5rem;
     background-color: white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50px;
     transform: rotate(180deg);
-    transition-duration: 250ms;
+    transition-duration: 400ms;
   }
 
   &:hover &__wrap {
@@ -164,110 +172,39 @@ header a {
   &__check {
     color: $third-color;
   }
-}
 
-/* apparition progressive du menu */
-
-#row-1 {
-  opacity:0;
-  -moz-animation: anim 100ms linear forwards 200ms;
-  -webkit-animation: anim 100ms linear forwards 200ms;
-  -o-animation: anim 100ms linear forwards 200ms;
-  -ms-animation: anim 100ms linear forwards 200ms;
-  animation: anim 100ms linear forwards 200ms;
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }
-
-#row-2 {
-  opacity:0;
-  -moz-animation: anim 200ms linear forwards 300ms;
-  -webkit-animation: anim 200ms linear forwards 300ms;
-  -o-animation: anim 200ms linear forwards 300ms;
-  -ms-animation: anim 200ms linear forwards 300ms;
-  animation: anim 200ms linear forwards 300ms;
+@-moz-keyframes fadein { /* sur Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }
-
-#row-3 {
-  opacity:0;
-  -moz-animation: anim 300ms linear forwards 400ms;
-  -webkit-animation: anim 300ms linear forwards 400ms;
-  -o-animation: anim 300ms linear forwards 400ms;
-  -ms-animation: anim 300ms linear forwards 400ms;
-  animation: anim 300ms linear forwards 400ms;
+@-webkit-keyframes fadein { /* sur Safari et Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }
-
-#row-4 {
-  opacity:0;
-  -moz-animation: anim 400ms linear forwards 500ms;
-  -webkit-animation: anim 400ms linear forwards 500ms;
-  -o-animation: anim 400ms linear forwards 500ms;
-  -ms-animation: anim 400ms linear forwards 500ms;
-  animation: anim 400ms linear forwards 500ms;
+@-o-keyframes fadein { /* sur Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
 }
-
-#row-5 {
-  opacity:0;
-  -moz-animation: anim 500ms linear forwards 600ms;
-  -webkit-animation: anim 500ms linear forwards 600ms;
-  -o-animation: anim 500ms linear forwards 600ms;
-  -ms-animation: anim 500ms linear forwards 600ms;
-  animation: anim 500ms linear forwards 600ms;
-}
-
-#row-6 {
-  opacity:0;
-  -moz-animation: anim 600ms linear forwards 700ms;
-  -webkit-animation: anim 600ms linear forwards 700ms;
-  -o-animation: anim 600ms linear forwards 700ms;
-  -ms-animation: anim 600ms linear forwards 700ms;
-  animation: anim 600ms linear forwards 700ms;
-}
-
-#row-7 {
-  opacity:0;
-  -moz-animation: anim 700ms linear forwards 800ms;
-  -webkit-animation: anim 700ms linear forwards 800ms;
-  -o-animation: anim 700ms linear forwards 800ms;
-  -ms-animation: anim 700ms linear forwards 800ms;
-  animation: anim 700ms linear forwards 800ms;
-}
-
-#row-8 {
-  opacity:0;
-  -moz-animation: anim 800ms linear forwards 900ms;
-  -webkit-animation: anim 800ms linear forwards 900ms;
-  -o-animation: anim 800ms linear forwards 900ms;
-  -ms-animation: anim 800ms linear forwards 900ms;
-  animation: anim 800ms linear forwards 900ms;
-}
-
-#row-9 {
-  opacity:0;
-  -moz-animation: anim 900ms linear forwards 1000ms;
-  -webkit-animation: anim 900ms linear forwards 1000ms;
-  -o-animation: anim 900ms linear forwards 1000ms;
-  -ms-animation: anim 900ms linear forwards 1000ms;
-  animation: anim 900ms linear forwards 1000ms;
-}
-
-@-moz-keyframes anim {
-  0%  {opacity:0;}
-  100% {opacity:1;}
-}
-@-webkit-keyframes anim {
-  0%  {opacity:0;}
-  100% {opacity:1;}
-}
-@-o-keyframes anim {
-  0%  {opacity:0;}
-  100% {opacity:1;}
-}
-@-ms-keyframes anim {
-  0%  {opacity:0;}
-  100% {opacity:1;}
-}
-@keyframes anim {
-  0%  {opacity:0;}
-  100% {opacity:1;}
 }
 
 /* soulignement des titres h2 */

@@ -1,27 +1,27 @@
 @import './outils/variables';
-
 @import './base/fonts';
 
 /* corps */
 
 html, body {
-  margin: 1rem 0rem 0rem;
+  margin: 0.5rem 0rem 0rem;
   font-family: 'Roboto', sans-serif;
 }
 
 h1 {
   font-family: 'Shrikhand';
-  margin-left: 1rem;
   font-weight: bold;
   font-style: italic;
-  font-size: xx-large;
+  font-size: x-large;
 }
 
 /* header */
 
 header {
   display: grid;
-  grid-template-areas: "a b c"
+  grid-template-areas: "a b c";
+  align-content: center;
+  margin-bottom: 0.5rem;
 }
 
 header a {
@@ -32,11 +32,59 @@ header a {
 .title {
   display: flex;
   justify-self: center;
-  padding-bottom: 2rem;
 }
 
 .left-arrow {
   cursor: pointer;
+}
+
+.menu-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem 0 1rem;
+  align-items: center;
+}
+
+/* image principale */
+
+.image-principale {
+  z-index: 0;
+  height: 300px;
+  & .image {
+    height: 55%;
+    object-fit: cover;
+    width: 100%;
+    position: absolute;
+  }
+}
+
+/* coeur */
+
+.heart {
+
+  cursor: pointer;
+
+  & .bg {
+    z-index: 1;
+    position: absolute;
+    font-size: 30px; 
+  }
+  
+  & .no-bg {
+    
+    font-size: 30px;
+    z-index: 0;
+    transform: scale(0);
+    background: linear-gradient($primary-color, $secondary-color);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  &:hover .no-bg {
+    transform-origin: bottom;
+    transform: scale(1);
+    transition: 0.3s;
+  }
 }
 
 /* menu */
@@ -45,158 +93,118 @@ header a {
   display: flex;
   flex-direction: column;
   background-color: $background-color;
-  gap: 1rem;
+  border-radius: 30px 30px 0px 0px;
+  z-index: 1;
+  position: relative;
 }
 
-.menu-title {
+.row-plate {
+
+  margin: 0.5rem;
+  background-color: white;
+  padding: 1rem;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  border-top-left-radius: 2rem;
-  border-top-right-radius: 2rem;
-  background-color: $background-color;
-  padding-top: 1rem;
-}
-
-.menu-title img {
-  margin-right: 2rem;
-}
-
-.restaurant-image {
-  width: 100%;
-  object-fit: cover;
-  display: flex;
-  justify-self: center;
-  margin-bottom: - 2.5rem;
-}
-
-.row-plat {
+  border-radius: 15px;
   box-shadow: 0px 4px 8px $shadow-color;
-  line-height: 1rem;
-}
+  overflow: hidden;
+  cursor: pointer;
+  animation: fadein 2s;
+  -moz-animation: fadein 2s; /* Firefox */
+  -webkit-animation: fadein 2s; /* Safari et Chrome */
+  -o-animation: fadein 2s; /* Opera */
 
-h3 {
-  font-weight: 900;
-  padding-top: 0.5rem;
-}
+  &__column {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    flex: 1;
+  }
+  
+  &__firstline {
+    margin: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  &__secondline {
+    margin: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
 
-h4 {
-  font-weight: 100;
-  margin-right: 1rem;
-  margin-top: -0.5rem;
-}
+  &__price {
+    font-weight: bold;
+    display: flex;
+    align-self: flex-end;
+  }
 
-/* apparition progressive du menu */
+  &__box {
+    background-color: $third-color;
+    margin: -1rem -5rem -1rem 1rem;
+    width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    transition-duration: 400ms;
+  }
 
-#row-1 {
-  opacity:0;
-  -moz-animation: anim 100ms linear forwards 200ms;
-  -webkit-animation: anim 100ms linear forwards 200ms;
-  -o-animation: anim 100ms linear forwards 200ms;
-  -ms-animation: anim 100ms linear forwards 200ms;
-  animation: anim 100ms linear forwards 200ms;
-}
+  &:hover &__box {
+    margin-right: -1rem;
+  }
 
-#row-2 {
-  opacity:0;
-  -moz-animation: anim 200ms linear forwards 300ms;
-  -webkit-animation: anim 200ms linear forwards 300ms;
-  -o-animation: anim 200ms linear forwards 300ms;
-  -ms-animation: anim 200ms linear forwards 300ms;
-  animation: anim 200ms linear forwards 300ms;
-}
+  &__wrap {
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    transform: rotate(180deg);
+    transition-duration: 400ms;
+  }
 
-#row-3 {
-  opacity:0;
-  -moz-animation: anim 300ms linear forwards 400ms;
-  -webkit-animation: anim 300ms linear forwards 400ms;
-  -o-animation: anim 300ms linear forwards 400ms;
-  -ms-animation: anim 300ms linear forwards 400ms;
-  animation: anim 300ms linear forwards 400ms;
-}
+  &:hover &__wrap {
+    transform: rotate(0);
+  }
 
-#row-4 {
-  opacity:0;
-  -moz-animation: anim 400ms linear forwards 500ms;
-  -webkit-animation: anim 400ms linear forwards 500ms;
-  -o-animation: anim 400ms linear forwards 500ms;
-  -ms-animation: anim 400ms linear forwards 500ms;
-  animation: anim 400ms linear forwards 500ms;
-}
+  &__check {
+    color: $third-color;
+  }
 
-#row-5 {
-  opacity:0;
-  -moz-animation: anim 500ms linear forwards 600ms;
-  -webkit-animation: anim 500ms linear forwards 600ms;
-  -o-animation: anim 500ms linear forwards 600ms;
-  -ms-animation: anim 500ms linear forwards 600ms;
-  animation: anim 500ms linear forwards 600ms;
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }
-
-#row-6 {
-  opacity:0;
-  -moz-animation: anim 600ms linear forwards 700ms;
-  -webkit-animation: anim 600ms linear forwards 700ms;
-  -o-animation: anim 600ms linear forwards 700ms;
-  -ms-animation: anim 600ms linear forwards 700ms;
-  animation: anim 600ms linear forwards 700ms;
+@-moz-keyframes fadein { /* sur Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }
-
-#row-7 {
-  opacity:0;
-  -moz-animation: anim 700ms linear forwards 800ms;
-  -webkit-animation: anim 700ms linear forwards 800ms;
-  -o-animation: anim 700ms linear forwards 800ms;
-  -ms-animation: anim 700ms linear forwards 800ms;
-  animation: anim 700ms linear forwards 800ms;
+@-webkit-keyframes fadein { /* sur Safari et Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }
-
-#row-8 {
-  opacity:0;
-  -moz-animation: anim 800ms linear forwards 900ms;
-  -webkit-animation: anim 800ms linear forwards 900ms;
-  -o-animation: anim 800ms linear forwards 900ms;
-  -ms-animation: anim 800ms linear forwards 900ms;
-  animation: anim 800ms linear forwards 900ms;
+@-o-keyframes fadein { /* sur Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
 }
-
-#row-9 {
-  opacity:0;
-  -moz-animation: anim 900ms linear forwards 1000ms;
-  -webkit-animation: anim 900ms linear forwards 1000ms;
-  -o-animation: anim 900ms linear forwards 1000ms;
-  -ms-animation: anim 900ms linear forwards 1000ms;
-  animation: anim 900ms linear forwards 1000ms;
-}
-
-#row-10 {
-  opacity:0;
-  -moz-animation: anim 900ms linear forwards 1000ms;
-  -webkit-animation: anim 900ms linear forwards 1000ms;
-  -o-animation: anim 900ms linear forwards 1000ms;
-  -ms-animation: anim 900ms linear forwards 1000ms;
-  animation: anim 900ms linear forwards 1000ms;
-}
-
-@-moz-keyframes anim {
-  0%  {opacity:0;}
-  100% {opacity:1;}
-}
-@-webkit-keyframes anim {
-  0%  {opacity:0;}
-  100% {opacity:1;}
-}
-@-o-keyframes anim {
-  0%  {opacity:0;}
-  100% {opacity:1;}
-}
-@-ms-keyframes anim {
-  0%  {opacity:0;}
-  100% {opacity:1;}
-}
-@keyframes anim {
-  0%  {opacity:0;}
-  100% {opacity:1;}
 }
 
 /* soulignement des titres h2 */
@@ -208,6 +216,7 @@ h2 {
   padding-bottom: 1rem;
   position: relative;
   margin-bottom: 0;
+  text-transform: uppercase;
 }
 
 h2::after {
@@ -220,52 +229,6 @@ h2::after {
 }
 
 /* coche */
-
-label:after {
-  content: "✓";
-  position: absolute;
-  height: 100%;
-  font-size: 2em;
-  background: #99E2D0;
-  width: 2em;
-  text-align: center;
-  line-height: 3em;
-  border-radius: 0 15px 15px 0;
-  color: white;
-  right: -5em;
-  transition: 0.2s;
-}
-
-:checked + label:after {
-  right: 0;
-}
-
-label{
-  transition:0.200ms;
-  background: white;
-  border-radius: 15px;
-}
-
-.menu-list {
-  display: flex;
-  padding: 0rem 5rem 0rem 1rem;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  height: 6rem;
-}
-
-.hidden {
-  position: absolute;
-  right: 100vw;
-}
-
-.column-2 {
-  margin-left: auto;
-  padding-left: 2rem;
-}
 
 /* coeur */
 
