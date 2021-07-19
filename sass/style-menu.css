@@ -1,4 +1,5 @@
-@charset "UTF-8";
+/* boutons */
+/* coeur */
 /* police */
 @font-face {
   font-family: "Roboto";
@@ -37,11 +38,6 @@ header {
   margin-bottom: 0.5rem;
 }
 
-header a {
-  width: 16px;
-  height: 16px;
-}
-
 .title {
   display: flex;
   justify-self: center;
@@ -49,6 +45,8 @@ header a {
 
 .left-arrow {
   cursor: pointer;
+  width: 13px;
+  margin-left: 1rem;
 }
 
 .menu-title {
@@ -87,7 +85,7 @@ header a {
   background: linear-gradient(#a55cdb, #FF79DA);
   -webkit-background-clip: text;
           background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 .heart:hover .no-bg {
   transform-origin: bottom;
@@ -191,7 +189,7 @@ header a {
   }
 }
 
-/* soulignement des titres h2 */
+/* soulignement des titres */
 h2 {
   margin-left: 1rem;
   font-weight: lighter;
@@ -211,130 +209,6 @@ h2::after {
   border-bottom: 3px solid #99E2D0;
 }
 
-/* coche */
-/* coeur */
-.icon {
-  cursor: pointer;
-  margin-top: 1rem;
-  margin-right: 2rem;
-}
-
-svg {
-  overflow: visible;
-}
-
-path {
-  /* décalage de la position de départ des pointillées */
-  stroke-dashoffset: 0;
-  /* contrôle le motif et l'espacement entre les segments utilisés pour tracer le contour */
-  stroke-dasharray: 1550;
-  /* modifie l'origine du repère */
-  transform-origin: center;
-}
-
-.heart-background {
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  /* contour */
-  stroke: none;
-}
-
-.heart-main:hover path {
-  -webkit-animation: stroke-animation 2s ease-in-out forwards;
-  animation: stroke-animation 2s ease-in-out forwards;
-}
-
-.heart-main:hover ~ .heart-background path {
-  -webkit-animation: fade-animation 2s ease-in-out forwards;
-  animation: fade-animation 2s ease-in-out forwards;
-}
-
-@-webkit-keyframes stroke-animation {
-  0% {
-    stroke-dashoffset: 0;
-  }
-  30% {
-    stroke-dashoffset: 1550;
-  }
-  60% {
-    stroke-dashoffset: 3100;
-    fill: transparent;
-    transform: scale(1);
-  }
-  80% {
-    fill: violet;
-    transform: scale(1.1);
-  }
-  90% {
-    transform: scale(1);
-  }
-  100% {
-    stroke-dashoffset: 3100;
-    fill: violet;
-  }
-}
-@keyframes stroke-animation {
-  0% {
-    stroke-dashoffset: 0;
-  }
-  30% {
-    stroke-dashoffset: 1550;
-  }
-  60% {
-    stroke-dashoffset: 3100;
-    fill: transparent;
-    transform: scale(1);
-  }
-  80% {
-    fill: violet;
-    transform: scale(1.1);
-  }
-  90% {
-    transform: scale(1);
-  }
-  100% {
-    stroke-dashoffset: 3100;
-    fill: violet;
-  }
-}
-@-webkit-keyframes fade-animation {
-  70% {
-    fill: transparent;
-    transform: scale(1);
-  }
-  80% {
-    fill: violet;
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: scale(2.5);
-    opacity: 0;
-  }
-}
-@keyframes fade-animation {
-  70% {
-    fill: transparent;
-    transform: scale(1);
-  }
-  80% {
-    fill: violet;
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: scale(2.5);
-    opacity: 0;
-  }
-}
 /* bouton commander */
 .section-commander {
   background-color: #f6f6f6;
@@ -353,9 +227,9 @@ path {
   margin: 2rem 0rem 3rem;
   background-color: #FF79DA;
 }
-
 .button-commander:hover {
-  background-color: rgba(255, 121, 218, 0.7);
+  filter: brightness(1.25);
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.8);
 }
 
 /* pied de page */
@@ -363,7 +237,6 @@ footer {
   display: flex;
   flex-direction: column;
   background-color: #353535;
-  color: #3b2222;
   height: 12rem;
 }
 
@@ -390,5 +263,4 @@ footer img {
   footer {
     align-items: center;
   }
-}
-/*# sourceMappingURL=style-la-note-enchantee.css.map *//*# sourceMappingURL=style-la-note-enchantee.css.map */
+}/*# sourceMappingURL=style-menu.css.map */

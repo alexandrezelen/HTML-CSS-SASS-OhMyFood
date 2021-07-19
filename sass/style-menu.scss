@@ -1,4 +1,5 @@
 @import './outils/variables';
+@import './outils/mixins';
 @import './base/fonts';
 
 /* corps */
@@ -24,11 +25,6 @@ header {
   margin-bottom: 0.5rem;
 }
 
-header a {
-  width: 16px;
-  height: 16px;
-}
-
 .title {
   display: flex;
   justify-self: center;
@@ -36,6 +32,8 @@ header a {
 
 .left-arrow {
   cursor: pointer;
+  width: 13px;
+  margin-left: 1rem;
 }
 
 .menu-title {
@@ -50,6 +48,7 @@ header a {
 .image-principale {
   z-index: 0;
   height: 300px;
+
   & .image {
     height: 55%;
     object-fit: cover;
@@ -61,30 +60,7 @@ header a {
 /* coeur */
 
 .heart {
-
-  cursor: pointer;
-
-  & .bg {
-    z-index: 1;
-    position: absolute;
-    font-size: 30px; 
-  }
-  
-  & .no-bg {
-    
-    font-size: 30px;
-    z-index: 0;
-    transform: scale(0);
-    background: linear-gradient($primary-color, $secondary-color);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  &:hover .no-bg {
-    transform-origin: bottom;
-    transform: scale(1);
-    transition: 0.3s;
-  }
+  @include hearts;
 }
 
 /* menu */
@@ -92,7 +68,7 @@ header a {
 .menu {
   display: flex;
   flex-direction: column;
-  background-color: $background-color;
+  background-color: $background-grey;
   border-radius: 30px 30px 0px 0px;
   z-index: 1;
   position: relative;
@@ -207,7 +183,7 @@ header a {
 }
 }
 
-/* soulignement des titres h2 */
+/* soulignement des titres */
 
 h2 {
   margin-left: 1rem;
@@ -228,156 +204,16 @@ h2::after {
   border-bottom: 3px solid $third-color;
 }
 
-/* coche */
-
-/* coeur */
-
-.icon {
-  cursor: pointer;
-  margin-top: 1rem;
-  margin-right: 2rem;
-}
-
-svg {
-  overflow: visible;
-}
-
-path {
-  /* décalage de la position de départ des pointillées */
-  stroke-dashoffset: 0;
-  /* contrôle le motif et l'espacement entre les segments utilisés pour tracer le contour */
-  stroke-dasharray: 1550;
-  /* modifie l'origine du repère */
-  transform-origin: center;
-}
-
-.heart-background {
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  /* contour */
-  stroke: none;
-}
-
-.heart-main:hover path {
-  -webkit-animation: stroke-animation 2s ease-in-out forwards;
-          animation: stroke-animation 2s ease-in-out forwards;
-}
-
-.heart-main:hover ~ .heart-background path {
-  -webkit-animation: fade-animation 2s ease-in-out forwards;
-          animation: fade-animation 2s ease-in-out forwards;
-}
-
-@-webkit-keyframes stroke-animation {
-  0% {
-    stroke-dashoffset: 0;
-  }
-  30% {
-    stroke-dashoffset: 1550;
-  }
-  60% {
-    stroke-dashoffset: 3100;
-    fill: transparent;
-    transform: scale(1);
-  }
-  80% {
-    fill: violet;
-    transform: scale(1.1);
-  }
-  90% {
-    transform: scale(1);
-  }
-  100% {
-    stroke-dashoffset: 3100;
-    fill: violet;
-  }
-}
-
-@keyframes stroke-animation {
-  0% {
-    stroke-dashoffset: 0;
-  }
-  30% {
-    stroke-dashoffset: 1550;
-  }
-  60% {
-    stroke-dashoffset: 3100;
-    fill: transparent;
-    transform: scale(1);
-  }
-  80% {
-    fill: violet;
-    transform: scale(1.1);
-  }
-  90% {
-    transform: scale(1);
-  }
-  100% {
-    stroke-dashoffset: 3100;
-    fill: violet;
-  }
-}
-@-webkit-keyframes fade-animation {
-  70% {
-    fill: transparent;
-    transform: scale(1);
-  }
-  80% {
-    fill: violet;
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: scale(2.5);
-    opacity: 0;
-  }
-}
-@keyframes fade-animation {
-  70% {
-    fill: transparent;
-    transform: scale(1);
-  }
-  80% {
-    fill: violet;
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: scale(2.5);
-    opacity: 0;
-  }
-}
-
 /* bouton commander */
 
 .section-commander {
-  background-color: $background-color;
+  background-color: $background-grey;
   display: flex;
   justify-content: center;
 }
 
 .button-commander {
-  cursor: pointer;
-  border-radius: 30px;
-  padding: 1.2rem 4rem;
-  box-shadow: inset 0rem 0rem 2rem 1rem $primary-color-contrast;
-  color: white;
-  border: none;
-  font-size: 1rem;
-  margin: 2rem 0rem 3rem;
-  background-color: $secondary-color;
-}
-
-.button-commander:hover {
-  background-color: rgba(255,121,218,0.7);
+  @include button;
 }
 
 /* pied de page */
@@ -386,7 +222,6 @@ footer {
   display: flex;
   flex-direction: column;
   background-color: $background-footer;
-  color: $font-color;
   height: 12rem;
 }
 
@@ -413,6 +248,4 @@ footer img {
   footer {
       align-items: center;
   }
-} 
-
-/*# sourceMappingURL=style.css.map */
+}
