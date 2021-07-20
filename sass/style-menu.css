@@ -117,6 +117,8 @@ header {
   /* gérer le dépassement du contenu de l'élément */
   overflow: hidden;
   cursor: pointer;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
 }
 .row-plate__column {
   /* permet d'afficher une ellipse */
@@ -174,7 +176,7 @@ header {
 .row-plate__check {
   color: #99E2D0;
 }
-@-webkit-keyframes fadein {
+@keyframes fadein {
   from {
     opacity: 0;
   }
@@ -182,7 +184,8 @@ header {
     opacity: 1;
   }
 }
-@keyframes fadein {
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
   from {
     opacity: 0;
   }
