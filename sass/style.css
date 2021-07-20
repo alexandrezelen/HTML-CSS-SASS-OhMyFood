@@ -278,8 +278,8 @@ h1 {
   z-index: 0;
   transform: scale(0);
   background: linear-gradient(#a55cdb, #FF79DA);
+  background-clip: border-box;
   -webkit-background-clip: text;
-          background-clip: text;
   color: transparent;
 }
 .heart:hover .no-bg {

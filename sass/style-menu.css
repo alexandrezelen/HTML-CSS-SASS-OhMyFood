@@ -83,8 +83,8 @@ header {
   z-index: 0;
   transform: scale(0);
   background: linear-gradient(#a55cdb, #FF79DA);
+  background-clip: border-box;
   -webkit-background-clip: text;
-          background-clip: text;
   color: transparent;
 }
 .heart:hover .no-bg {
@@ -112,13 +112,8 @@ header {
   box-shadow: 0px 4px 8px #eaeaea;
   overflow: hidden;
   cursor: pointer;
-  animation: fadein 2s;
-  -moz-animation: fadein 2s;
-  /* Firefox */
   -webkit-animation: fadein 2s;
-  /* Safari et Chrome */
-  -o-animation: fadein 2s;
-  /* Opera */
+          animation: fadein 2s;
 }
 .row-plate__column {
   text-overflow: ellipsis;
@@ -171,7 +166,7 @@ header {
 .row-plate__check {
   color: #99E2D0;
 }
-@keyframes fadein {
+@-webkit-keyframes fadein {
   from {
     opacity: 0;
   }
@@ -179,8 +174,7 @@ header {
     opacity: 1;
   }
 }
-@-webkit-keyframes fadein {
-  /* sur Safari et Chrome */
+@keyframes fadein {
   from {
     opacity: 0;
   }
