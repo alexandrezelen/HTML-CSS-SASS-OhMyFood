@@ -20,8 +20,8 @@
 }
 /* background loading spinner */
 .chargement-background {
-  -webkit-animation: fadeIn 5000ms;
-          animation: fadeIn 5000ms;
+  -webkit-animation: fadeIn 3000ms;
+          animation: fadeIn 3000ms;
 }
 
 @-webkit-keyframes fadeIn {
@@ -47,12 +47,13 @@
   border-bottom: 10px solid #FF79DA;
   border-left: 10px solid #99E2D0;
   border-right: 10px solid #353535;
+  /* forme arrondie du loading spinner et dimensions */
   border-radius: 50%;
   width: 100px;
   height: 100px;
+  /* animation du loading spinner */
   -webkit-animation: spin 1500ms linear;
           animation: spin 1500ms linear;
-  transform: scale(0);
   /* placement au milieu de la page */
   margin: auto;
   position: absolute;
@@ -60,6 +61,8 @@
   left: 0;
   right: 0;
   bottom: 0;
+  /* disparition du loading spinner */
+  transform: scale(0);
 }
 
 /* animation du loader */
@@ -268,21 +271,24 @@ h1 {
   right: 1rem;
   bottom: 3rem;
 }
-.heart .bg {
+.heart .empty {
   z-index: 1;
   position: absolute;
   font-size: 30px;
 }
-.heart .no-bg {
+.heart .black {
   font-size: 30px;
   z-index: 0;
+  /* modifie l'espace de coordonnées utilisé pour la mise en forme visuelle */
   transform: scale(0);
+  /* dégradé de 2 couleurs */
   background: linear-gradient(#a55cdb, #FF79DA);
+  /* façon dont l'arrière-plan s'étend sous la boîte de bordure */
   background-clip: border-box;
   -webkit-background-clip: text;
   color: transparent;
 }
-.heart:hover .no-bg {
+.heart:hover .black {
   transform-origin: bottom;
   transform: scale(1);
   transition: 0.3s;

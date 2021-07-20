@@ -6,7 +6,7 @@
 /* background loading spinner */
 
 .chargement-background {
-  animation: fadeIn 5000ms;
+  animation: fadeIn 3000ms;
 }
 
 @keyframes fadeIn {
@@ -22,17 +22,24 @@
   border-bottom: 10px solid $secondary-color;
   border-left: 10px solid $third-color;
   border-right: 10px solid $background-footer;
+
+  /* forme arrondie du loading spinner et dimensions */
   border-radius: 50%;
   width: 100px;
   height: 100px;
+
+  /* animation du loading spinner */
   animation: spin 1500ms linear;
-  transform: scale(0);
 
   /* placement au milieu de la page */
 
   margin: auto;
   position: absolute;
   top:0; left:0; right:0; bottom:0;
+
+  /* disparition du loading spinner */
+
+  transform: scale(0);
 }
 
   /* animation du loader */
